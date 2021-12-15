@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account Details</title>
+    <style type="text/css">
+    *{
+      margin:0;
+      padding:0;
+    }
+    body {
+      background-color: var(--bs-gray-dark);
+      background-position: center;
+      background-size: cover;
+      font-family: sans-serif;
+      margin-top: 40px;
+    }
+    .regform{
+      width: 800px;
+      background-color: rgb(0,0,0,0.6);
+      margin: auto;
+      color: #FFFFFF;
+      padding: 10px 0px 10px 0px;
+      text-align: center;
+      border-radius: 15px 15px 0px 0px;
+    }
+    .main{
+      background-color: rgb(0,0,0,0.5);
+      width: 800px;
+      margin: auto;
+    }
+    form{
+      padding: 10px;
+    }
+    #name{
+      width: 100%;
+      height: 100px;
+    }
+    .name{
+      margin-left: 25px;
+      margin-top: 30px;
+      width: 100px;
+      color:white;
+      font-size: 18px;
+      font-weight: 700;
+    }
+      .namee{
+      margin-left: 25px;
+      margin-top: -30px;
+      width: 100px;
+      color:white;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .firstname{
+      position: relative;
+      left: -120px;
+      top: -37px;
+      line-height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+    }
+    .lastname{
+      position: relative;
+      left: 500px;
+      top: -40px;
+      line-height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+      .middlename{
+      position: relative;
+      left: 127px;
+      top: -20px;
+      line-height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+      .alias{
+      position: relative;
+      left: 91px;
+      top: -20px;
+      line-height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+    .firstlabel{
+      position: relative;
+      color: #E5E5E5;
+      text-transform: capitalize;
+      font-size: 14px;
+      left: 203px;
+      top: -50px;
+    }
+    .lastlabel{
+      position: relative;
+      color: #E5E5E5;
+      text-transform: capitalize;
+      font-size: 14px;
+      left: 255px;
+      top: -6px;
+    }
+      .middlelabel{
+      position: relative;
+      color: #E5E5E5;
+      text-transform: capitalize;
+      font-size: 14px;
+      left: -118px;
+      top: 10px;
+    }
+      .aliaslabel{
+      position: relative;
+      color: #E5E5E5;
+      text-transform: capitalize;
+      font-size: 14px;
+      left: -152px;
+      top: 10px;
+    }
+      .birthlabel{
+      position: relative;
+      color: #E5E5E5;
+      text-transform: capitalize;
+      font-size: 14px;
+      left: 202px;
+      top: 13px;
+    }
+    .code{
+      position: relative;
+      left: 200px;
+      top: -37px;
+      line-height: 40px;
+      width: 95px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+    .number{
+      position: relative;
+      left: 200px;
+      top: -37px;
+      line-height: 40px;
+      width: 480px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+    .option{
+      position: relative;
+      left: 200px;
+      top: -37px;
+      line-height: 40px;
+      width: 532px;
+      height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+      outline: none;
+      overflow: hidden;
+    }
+    .option option{
+      font-size: 20px;
+    }
+
+    button{
+      background-color: #808080;
+      display: block;
+      margin: 20px 0px 0px 240px;
+      text-align: center;
+      font-size: 20px;
+      border-radius: 12px;
+      border:2px solid #366473;
+      padding: 14px 110px;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      transition: 0.25px;
+
+    }
+    button:hover{
+      background-color: #36454F;
+    }
+
+    .month{
+      position: relative;
+      left: 200px;
+      top: -37px;
+      line-height: 40px;
+      width: 130px;
+      height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+      outline: none;
+      overflow: hidden;
+    }
+
+    .day{
+      position: relative;
+      left: 210px;
+      top: -37px;
+      line-height: 40px;
+      width: 130px;
+      height: 40px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+      outline: none;
+      overflow: hidden;
+    }
+
+    .yeardate{
+       position: relative;
+      left: 220px;
+      top: -37px;
+      line-height: 40px;
+      width: 130x;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+      .birthplace{
+      position: relative;
+      left: 163px;
+      top: 5px;
+      line-height: 40px;
+      width: 483px;
+      border-radius: 6px;
+      padding: 0 22px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .year{
+      position: relative;
+      color: #E5E5E5;
+      font-size: 16px;
+      left: 492px;
+      top: -50px;
+    }
+    </style>
+  </head>
+      <body>
+    <div class="regform"><h1>Manage your Account</h1></div>
+    <div class="main">
+      <form>
+        <div id="name"></div>
+        <h2 class="name">Name & Alias</h2>
+        <input class="lastname" type="text" name="last_name"></input>
+        <label class="lastlabel">last name</label>
+        <input class="firstname" type="text" name="first_name" /><br />
+        <label class="firstlabel">first name</label>
+        <input class="middlename" type="text" name="middle_name"></input>
+        <label class="middlelabel">middle name</label>
+        <input class="alias" type="text" name="alias"></input>
+        <label class="aliaslabel">alias</label>
+
+        <h2 class="name">Area</h2>
+        <select class="option" name="Area">
+          <option disabled="disabled" selected="selected">--Choose Area</option>
+          <option>Purok 1</option>
+          <option>Purok 2</option>
+          <option>Purok 3</option>
+          <option>Purok 4</option>
+          <option>Purok 5</option>
+        </select>
+
+        <h2 class="name">Birthday</h2>
+        <select class="month" name="subject">
+          <option disabled="disabled" selected="selected">--Month</option>
+          <option selected disabled>--SELECT--</option>
+          <option value="01"  <?php echo ($viewMonth=='01')?('selected'):(''); ?> >January</option>
+          <option value="02" <?php echo ($viewMonth=='02')?('selected'):(''); ?> >February</option>
+          <option value="03" <?php echo ($viewMonth=='03')?('selected'):(''); ?> >March</option>
+          <option value="04" <?php echo ($viewMonth=='04')?('selected'):(''); ?> >April</option>
+          <option value="05" <?php echo ($viewMonth=='05')?('selected'):(''); ?> >May</option>
+          <option value="06" <?php echo ($viewMonth=='06')?('selected'):(''); ?> >June</option>
+          <option value="07" <?php echo ($viewMonth=='07')?('selected'):(''); ?> >July</option>
+          <option value="08" <?php echo ($viewMonth=='08')?('selected'):(''); ?> >August</option>
+          <option value="09" <?php echo ($viewMonth=='09')?('selected'):(''); ?> >September</option>
+          <option value="10" <?php echo ($viewMonth=='10')?('selected'):(''); ?> >October</option>
+          <option value="11" <?php echo ($viewMonth=='11')?('selected'):(''); ?> >November</option>
+          <option value="12" <?php echo ($viewMonth=='12')?('selected'):(''); ?> >December</option>
+        </select>
+
+        <select class="day" name="subject">
+          <option disabled="disabled" selected="selected">--Day</option>
+          <option selected disabled>--SELECT--</option>
+            <option value="01" <?php echo ($viewDay=='01')?('selected'):(''); ?> >01</option>
+            <option value="02" <?php echo ($viewDay=='02')?('selected'):(''); ?> >02</option>
+            <option value="03" <?php echo ($viewDay=='03')?('selected'):(''); ?> >03</option>
+            <option value="04" <?php echo ($viewDay=='04')?('selected'):(''); ?> >04</option>
+            <option value="05" <?php echo ($viewDay=='05')?('selected'):(''); ?> >05</option>
+            <option value="06" <?php echo ($viewDay=='06')?('selected'):(''); ?> >06</option>
+            <option value="07" <?php echo ($viewDay=='07')?('selected'):(''); ?> >07</option>
+            <option value="08" <?php echo ($viewDay=='08')?('selected'):(''); ?> >08</option>
+            <option value="09" <?php echo ($viewDay=='09')?('selected'):(''); ?> >09</option>
+            <option value="10" <?php echo ($viewDay=='10')?('selected'):(''); ?> >10</option>
+            <option value="11" <?php echo ($viewDay=='11')?('selected'):(''); ?> >11</option>
+            <option value="12" <?php echo ($viewDay=='12')?('selected'):(''); ?> >12</option>
+            <option value="13" <?php echo ($viewDay=='13')?('selected'):(''); ?> >13</option>
+            <option value="14" <?php echo ($viewDay=='14')?('selected'):(''); ?> >14</option>
+            <option value="15" <?php echo ($viewDay=='15')?('selected'):(''); ?> >15</option>
+            <option value="16" <?php echo ($viewDay=='16')?('selected'):(''); ?> >16</option>
+            <option value="17" <?php echo ($viewDay=='17')?('selected'):(''); ?> >17</option>
+            <option value="18" <?php echo ($viewDay=='18')?('selected'):(''); ?> >18</option>
+            <option value="19" <?php echo ($viewDay=='19')?('selected'):(''); ?> >19</option>
+            <option value="20" <?php echo ($viewDay=='20')?('selected'):(''); ?> >20</option>
+            <option value="21" <?php echo ($viewDay=='21')?('selected'):(''); ?> >21</option>
+            <option value="22" <?php echo ($viewDay=='22')?('selected'):(''); ?> >22</option>
+            <option value="23" <?php echo ($viewDay=='23')?('selected'):(''); ?> >23</option>
+            <option value="24" <?php echo ($viewDay=='24')?('selected'):(''); ?> >24</option>
+            <option value="25" <?php echo ($viewDay=='25')?('selected'):(''); ?> >25</option>
+            <option value="26" <?php echo ($viewDay=='26')?('selected'):(''); ?> >26</option>
+            <option value="27" <?php echo ($viewDay=='27')?('selected'):(''); ?> >27</option>
+            <option value="28" <?php echo ($viewDay=='28')?('selected'):(''); ?> >28</option>
+            <option value="29" <?php echo ($viewDay=='29')?('selected'):(''); ?> >29</option>
+            <option value="30" <?php echo ($viewDay=='30')?('selected'):(''); ?> >30</option>
+            <option value="31" <?php echo ($viewDay=='31')?('selected'):(''); ?> >31</option>
+        </select>
+        <input class="yeardate" type="text" name="year_" /><br />
+        <label class="year">Year</label>
+        <input class="birthplace" type="text" name="placeofbirth"></input>
+
+        <h2 class="namee">Birthplace</h2>
+        <label class="birthlabel">Place of birth</label>
+
+        <h2 class="name">Sex</h2>
+        <select class="option" name="subject">
+          <option disabled="disabled" selected="selected">--Choose option</option>
+          <option value="Male" <?php echo ($viewGender=='Male')?('selected'):(''); ?> >Male</option>
+          <option value="Female" <?php echo ($viewGender=='Female')?('selected'):(''); ?> >Female</option>
+          <option value="Prefer not to Say" <?php echo ($viewGender=='Prefer not to say')?('selected'):(''); ?> >Prefer not to say</option>
+        </select>
+
+        <h2 class="name">Civil Status</h2>
+        <select class="option" name="subject">
+        <option selected disabled>--SELECT--</option>
+          <option value="Single" <?php echo ($viewCivilStatus=='Single')?('selected'):(''); ?> >Single</option>
+          <option value="Married" <?php echo ($viewCivilStatus=='Married')?('selected'):(''); ?> >Married</option>
+          <option value="Widowed" <?php echo ($viewCivilStatus=='Widowed')?('selected'):(''); ?> >Widowed</option>
+          <option value="Separated" <?php echo ($viewCivilStatus=='Separated')?('selected'):(''); ?> >Separated</option>
+        </select>
+
+        <h2 class="name">Voter Status</h2>
+        <select class="option" name="subject">
+        <option selected disabled>--SELECT--</option>
+          <option value="active" <?php echo ($viewIfActive=='active')?('selected'):(''); ?> >ACTIVE</option>
+          <option value="inactive" <?php echo ($viewIfActive=='inactive')?('selected'):(''); ?> >INACTIVE</option>
+        </select>
+        <button type="submit">Save New Resident</button>
+
+
+      </form>
+    </div>
+  </body>
+</html>
