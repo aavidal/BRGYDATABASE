@@ -128,9 +128,9 @@
                       <th>Resident ID No.: <?php echo $viewIdNumber; ?> 
                       <input type='hidden' name='resID' value='<?php echo $viewIdNumber?>'></th>
 
-                      <th>First Name <?php echo  $viewFirstName ?>" name="firstName" placeholder="First Name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" readonly></123>
-                      <th>Last Name  <?php echo $viewLastName ?>" name="lastName" placeholder="Last Name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" readonly></123>
-                      <th>Alias  <?php echo  $viewAlias ?>" name="alias" placeholder="alias" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" readonly></123>
+                      <th>First Name </th>
+                      <th>Last Name  </th>
+                      <th>Alias  </th>
                       <th>Gender</th>
                       <th>Birthdate</th>
                       <th>Civil Status</th>

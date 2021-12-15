@@ -2,37 +2,7 @@
     include_once('./Database/Database.php');
     session_start();
     $name = $_SESSION['name'];
-    $purok = $_SESSION['purok'];
-    $position = $_SESSION['position'];
-    $viewIdNumber = $_SESSION['viewIdNumber'];
-    $viewLastName = $_SESSION['viewLastName'];
-    $viewFirstName = $_SESSION['viewFirstName'];
-    $viewMiddleName = $_SESSION['viewMiddleName'];
-    $viewAlias = $_SESSION['viewAlias'];
-    $viewMonth = $_SESSION['viewMonth'];
-    $viewDay = $_SESSION['viewDay'];
-    $viewYear = $_SESSION['viewYear'];
-    $viewPOB = $_SESSION['viewPOB'];
-    $viewGender = $_SESSION['viewGender'];
-    $viewCivilStatus = $_SESSION['viewCivilStatus'];
-    $viewVoterStatus = $_SESSION['viewVoterStatus'];
-    $viewIfActive = $_SESSION['viewIfActive'];
-    $viewReligion = $_SESSION['viewReligion'];
-    $viewNationality = $_SESSION['viewNationality'];
-    $viewOccupation = $_SESSION['viewOccupation'];
-    $viewSector = $_SESSION['viewSector'];
-    $viewCityAddress = $_SESSION['viewCityAddress'];
-    $viewProvAddress = $_SESSION['viewProvAddress'];
-    $viewPurok = $_SESSION['viewPurok'];
-    $viewEmail = $_SESSION['viewEmail'];
-    $viewMobileNumberA = $_SESSION['viewMobileNumberA'];
-    $viewMobileNumberB = $_SESSION['viewMobileNumberB'];
-    $viewHomeNumberA = $_SESSION['viewHomeNumberA'];
-    $viewHomeNumberB = $_SESSION['viewHomeNumberB'];
-    $viewResidentType = $_SESSION['viewResidentType'];
-    $viewResidentStatus = $_SESSION['viewResidentStatus'];
-    $viewEncoder = $_SESSION['viewEncoder'];
-    $viewEncoderPosition = $_SESSION['viewEncoderPosition'];
+    
 ?>
 
 <!DOCTYPE html>
@@ -122,30 +92,34 @@
                                         <tr>
                                             <th>Action</th>
                                             <th>Resident ID</th>
-                                            <th>First Name <?php echo  $viewFirstName ?>" name="firstName" placeholder="First Name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" readonly></123></th>
-                                            <th>Last Name <?php echo $viewLastName ?>" name="lastName" placeholder="Last Name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" readonly></123></th>
-                                            <th>Alias <?php echo  $viewAlias ?>" name="alias" placeholder="alias" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" readonly></123></th>
-                                            <th>Gender <?php echo ($viewGender=='Male')?('selected'):(''); ?> >Male <?php echo ($viewGender=='Female')?('selected'):(''); ?> >Female </th>
+                                            <th>First Name </th>
+                                            <th>Last Name </th>
+                                            <th>Alias </th>
+                                            <th>Gender </th>
                                             <th>Birthdate</th>
                                             <th>Civil Status</th>
                                             <th>Voter Status</th>
                                           </tr>
                                         </thead>
-                                        <tfoot>
-                                          <tr>
-                                            <th>Action</th>
-                                            <th>Resident ID</th>
-                                            <th>First Name <?php echo  $viewFirstName ?>" name="firstName" placeholder="First Name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" readonly></123></th>
-                                            <th>Last Name <?php echo $viewLastName ?>" name="lastName" placeholder="Last Name" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" readonly></123></th>
-                                            <th>Alias <?php echo  $viewAlias ?>" name="alias" placeholder="alias" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" readonly></123></th>
-                                            <th>Gender <?php echo ($viewGender=='Male')?('selected'):(''); ?> >Male <?php echo ($viewGender=='Female')?('selected'):(''); ?> >Female </th>
-                                            <th>Birthdate</th>
-                                            <th>Civil Status</th>
-                                            <th>Voter Status</th>
-                                          </tr>
+
+                                        <tbody>
+                                        <tr>
+                                            <td>Action</td>
                                         
+                                            <td>Resident ID</td>
+                                        
+                                            <td>First Name </td>
+                                            <td>Last Name </td>
+                                            <td>Alias </td>
+                                            <td>Gender  </td>
+                                            <td>Birthdate</td>
+                                            <td>Civil Status</td>
+                                            <td>Voter Status</td>
+                                          </tr>
+                                          
                                     </tbody>
                                 </table>
+                                
                             </div>
                         </div>
                     </div>
