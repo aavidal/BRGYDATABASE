@@ -103,19 +103,28 @@
                                         </thead>
 
                                         <tbody>
-                                        <tr>
-                                            <td>Action</td>
-                                        
-                                            <td>Resident ID</td>
-                                        
-                                            <td>First Name </td>
-                                            <td>Last Name </td>
-                                            <td>Alias </td>
-                                            <td>Gender  </td>
-                                            <td>Birthdate</td>
-                                            <td>Civil Status</td>
-                                            <td>Voter Status</td>
-                                          </tr>
+
+                                        <?php
+                                        include_once("./database/connection.php");
+                                        $getResident = "SELECT * FROM officials";
+                                        $result = mysqli_query($conn, $getResident);
+                                        if (mysqli_num_rows($resident) > 0) {
+                                            while ($resident = mysqli_fetch_assoc($resident)) 
+                                            {
+                                            echo "<tr>"
+                                                . "<td>" . $resident['idNumber']
+                                                . "</td><td>" . $resident['position']
+                                                . "</td><td name='tdLastName' value=".$resident['nameLast'].">" . $resident['nameLast']
+                                                . "</td><td name='tdFirstName' value=".$resident['nameFirst'].">" . $resident['nameFirst']
+                                                . "</td><td name='tdMiddleName' value=".$resident['nameMiddle'].">" . $resident['nameMiddle']
+                                                . "</td><td>" . $resident['nameAlias']
+                                                . "</td><td>" . $resident['purok']
+                                                . "</td><td><button name='btnView' type='submit' value=" . $resident['idNumber'] . " class='btn btn-success text-dark bg-gradient fa fa-eye'></button>
+                                                    <button name='btnDelete' type='submit' value=" . $resident['idNumber'] . " class='btn btn-danger text-dark bg-gradient fa fa-trash'></button></td>"
+                                                . "</tr>";
+                                            }
+                                        }
+                                        ?>
                                           
                                     </tbody>
                                 </table>
